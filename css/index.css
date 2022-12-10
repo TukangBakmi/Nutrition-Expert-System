@@ -1,0 +1,33 @@
+
+body {
+    background-image: url('../img/sispak.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.card{
+    border-radius: 50px;
+    background-color: #3D8026;
+    
+}
+
+.card-title{
+    font-size: 60px;
+    color: #FFF964;
+    font-weight: 700;
+    
+}
+
+.btn{
+    margin-top: 500px ;
+    font-weight: 600;
+    padding: 10px 70px;
+    border-radius: 25px;
+    background-color: #3D8026;
+    color: #FFF964;
+    font-size: 30px;
+}
+.btn:hover{
+    background-color: #CFFFAA;
+}
