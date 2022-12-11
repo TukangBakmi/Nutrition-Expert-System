@@ -1,0 +1,38 @@
+body {
+    background-color: #90CE86;
+}
+
+.input {
+    background-color: #CFFFAA;
+}
+
+h1 {
+    color: #276600;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+h4 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 10px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #3D8026;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #51b009;
+}
+
+@media (max-width: 991px) {
+    img.imt {
+        display: none;
+        visibility: hidden;
+    }
+}
