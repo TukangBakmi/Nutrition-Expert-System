@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'framework/bootstrap.php'
-?>
+
+<head>
+  <title>Nutrition Expert System</title>
+  <link rel="icon" href="img/_logoCircle.png">
+  <?php include 'framework/bootstrap.php'?>
+</head>
 
 <body>
   <?php include 'navbar.php' ?>
@@ -13,10 +17,16 @@
       </div>
     </div>
     <div class="d-flex justify-content-center btn-start">
-      <a href="input.php"><button type="button" class="btn">Start</button></a>
+      <button id="btnStart" type="button" class="btn">Start</button>
     </div>
   </div>
 
+  <script>
+    document.getElementById("btnStart").addEventListener("click", function(){
+      window.location.href = "input.php";
+    });
+  </script>
+  
 </body>
 
 </html>

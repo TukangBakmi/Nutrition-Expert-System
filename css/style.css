@@ -2,15 +2,35 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+
 nav{
-    background-color: #3D8026 !important;
+    background-color: #3D8026;
+}
+
+.navbar-brand{
+    font-weight: 700;
+    font-size: large;
+    color: #beed76 !important;
+    margin-left: 2rem;
+}
+
+.navbar-brand:hover{
+    cursor: default;
 }
 
 .navbar-collapse {
     align-items: end;
 }
+
+.navbar-collapse .active{
+    color: #CFFFAA !important;
+}
+
 .nav-link{
     font-weight: 700;
     font-size: large;
-    color: #CFFFAA !important;
+}
+
+.nav-link:hover{
+    color: white !important;
 }

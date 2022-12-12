@@ -16,7 +16,7 @@ body {
     font-size: 60px;
     color: #FFF964;
     font-weight: 700;
-    
+    cursor: default;
 }
 
 .btn{

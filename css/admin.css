@@ -1,0 +1,86 @@
+body{
+    background-color: #90CE86;
+    font-weight: 700 !important;
+}
+
+/* Kotak Login */
+.login .box {
+    background: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1% 2%;
+    left: 50%;
+    width: 500px;
+    margin-left: -250px;
+    margin-top: 8%;
+    text-align: center;
+    border-radius: 20px;
+}
+/* Label email & password */
+.login label{
+    text-align: left;
+}
+/* Bayangan kotak */
+.box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(30px);
+}
+/* Border Kotak */
+.box:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+}
+/* Kotak Login */
+.login span {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    border-radius: 20px;
+}
+
+.login button{
+    width: 38%;
+    margin: 6% 6%;
+}
+
+.login button a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.content {
+    z-index: 10;
+    color: #fff;
+}
+  
+.box:after {
+    background-color: #CFFFAA;
+}
+  
+.box:before {
+    background-color: #646464;
+}
+
+.admin:hover{
+    color:yellow;
+    text-decoration: underline;
+}
+
+.alert-note{
+    color: red;
+}

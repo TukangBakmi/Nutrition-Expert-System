@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'framework/bootstrap.php'
-?>
+    
+<head>
+  <title>Nutrition Expert System</title>
+  <link rel="icon" href="img/_logoCircle.png">
+  <?php include 'framework/bootstrap.php'?>
+</head>
 
 <body>
     <?php include 'navbar.php' ?>
