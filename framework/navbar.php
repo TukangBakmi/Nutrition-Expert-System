@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand">Nutrition Condition Detection</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,16 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item me-4">
-          <a class="nav-link active" aria-current="page" href="index.php">Beranda</a>
+          <a id="home" class="nav-link active" aria-current="page" href="index.php">Beranda</a>
         </li>
         <li class="nav-item me-4">
-          <a class="nav-link" href="#">Riwayat</a>
+          <a id="history" class="nav-link" href="riwayat.php">Riwayat</a>
         </li>
         <li class="nav-item me-4">
-          <a class="nav-link" href="#">Tentang Kami</a>
+          <a id="about" class="nav-link" href="about.php">Tentang Kami</a>
         </li>
         <li class="nav-item me-4">
-          <a class="nav-link" href="admin.php">Admin</a>
+          <a id="admin" class="nav-link" href="admin.php">Admin</a>
         </li>
       </ul>
     </div>

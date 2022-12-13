@@ -2,16 +2,16 @@
 <html lang="en">
     
 <head>
-  <title>Nutrition Expert System</title>
+  <title>Konsultasi | NCD</title>
   <link rel="icon" href="img/_logoCircle.png">
   <?php include 'framework/bootstrap.php'?>
 </head>
 
 <body>
-    <?php include 'navbar.php' ?>
+    <?php include 'framework/navbar.php' ?>
     <link rel="stylesheet" href="css/konsultasi.css">
     <div class="container">
-        <h1 style="text-align:center">Konsultasi</h1>
+        <h1 class="text-center">Konsultasi</h1>
         <p>Pilih tingkat keyakinan sesuai gejala yang dialami</p>
         <table class="table1">
             <tr>

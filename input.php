@@ -2,17 +2,17 @@
 <html lang="en">
     
 <head>
-  <title>Nutrition Expert System</title>
+  <title>Input Data | NCD</title>
   <link rel="icon" href="img/_logoCircle.png">
   <?php include 'framework/bootstrap.php'?>
 </head>
 
 <body>
-    <?php include 'navbar.php' ?>
+    <?php include 'framework/navbar.php' ?>
     <link rel="stylesheet" href="css/input.css">
     <div class="container">
-        <h1 style="text-align:center">Masukkan Data</h1>
-        <div class="row   justify-content-center">
+        <h1 class="text-center">Masukkan Data</h1>
+        <div class="row justify-content-center">
             <form class="col-7 col-md-7 col-lg-4 align-self-center">
                 <h4>Nama Pasien</h4>
                 <input type="text" name="name" required="required" class="input form-control" size="30" placeholder="Masukkan nama anda">

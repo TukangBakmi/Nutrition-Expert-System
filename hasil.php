@@ -2,16 +2,16 @@
 <html lang="en">
     
 <head>
-  <title>Nutrition Expert System</title>
+  <title>Hasil Diagnosis | NCD</title>
   <link rel="icon" href="img/_logoCircle.png">
   <?php include 'framework/bootstrap.php'?>
 </head>
 
 <body>
-<?php include 'navbar.php' ?>
+<?php include 'framework/navbar.php' ?>
 <link rel="stylesheet" href="css/hasil.css">
 <div class="container">
-    <h5 class="hasil text-center">Hasil Diagnosa</h5>
+    <h1 class="hasil text-center">Hasil Diagnosis</h1>
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-inner">
                 <div class="carousel-item top-50 active" data-bs-interval="10000">
