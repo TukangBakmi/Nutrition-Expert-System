@@ -7,13 +7,16 @@
             <div class="collapse navbar-collapse p-3" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
+                        <a href="adminBankSoal.php" class="p-2 btn nav-link" style="text-decoration: none;"><h3 style="font-size:1em">BANK SOAL</h3></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="adminRules.php" class="p-2 btn nav-link" style="text-decoration: none;"><h3 style="font-size:1em">RULES</h3></a>
+                    </li>
+                    <li class="nav-item">
                         <a href="adminGejala.php" class="p-2 btn nav-link" style="text-decoration: none;"><h3 style="font-size:1em">GEJALA</h3></a>
                     </li>
                     <li class="nav-item">
                         <a href="adminPenyakit.php" class="p-2 btn nav-link" style="text-decoration: none;"><h3 style="font-size:1em">PENYAKIT</h3></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="adminRules.php" class="p-2 btn nav-link" style="text-decoration: none;"><h3 style="font-size:1em">RULES</h3></a>
                     </li>
                     <li class="nav-item">
                         <a href="adminBMI.php" class="p-2 btn nav-link" style="text-decoration: none;"><h3 style="font-size:1em">BMI</h3></a>

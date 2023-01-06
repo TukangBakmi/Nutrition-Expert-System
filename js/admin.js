@@ -82,7 +82,7 @@ $(document).ready(function() {
                             confirmButtonText: 'Go to Admin Page',
                             text: "Welcome back, " + result,
                         }).then(function() {
-                            window.location = "administrator/adminGejala.php";
+                            window.location = "administrator/adminBankSoal.php";
                         });
                     }
                 }

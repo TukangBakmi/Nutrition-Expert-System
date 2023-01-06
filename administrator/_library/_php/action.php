@@ -80,6 +80,25 @@ if(isset($_REQUEST['req'])){
 
 
 
+    // ---------------------------------------------- Pertanyaan ----------------------------------------------
+    if($req=="pertanyaan"){
+        $result = $conn->query("SELECT a.id, a.code, b.name AS gejala, 
+                        pertanyaan, id_gejala FROM cf_bank_soal a
+                        LEFT JOIN cf_gejala b ON a.id_gejala = b.id");
+        while($row=$result->fetch_assoc()){
+            $data[]=$row;
+        }
+    }
+    if ($req == 'recordPertanyaan') {
+        $id = $_GET['id'];
+        $result = $conn->query("SELECT * FROM cf_bank_soal WHERE id = $id");
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+
+
+
     echo json_encode($data);
 }
 ?>
