@@ -30,6 +30,14 @@
         </div>
     </div>
 
+    <script>
+        document.getElementById("home").classList.remove("active");
+        document.getElementById("consult").classList.add("active");
+        document.getElementById("history").classList.remove("active");
+        document.getElementById("about").classList.remove("active");
+        document.getElementById("admin").classList.remove("active");
+    </script>
+
 </body>
 
 </html>

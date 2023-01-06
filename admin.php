@@ -50,6 +50,7 @@
     <script src="js/admin.js"></script>
     <script>
         document.getElementById("home").classList.remove("active");
+        document.getElementById("consult").classList.remove("active");
         document.getElementById("history").classList.remove("active");
         document.getElementById("about").classList.remove("active");
         document.getElementById("admin").classList.add("active");

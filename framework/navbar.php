@@ -7,7 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item me-4">
-          <a id="home" class="nav-link active" aria-current="page" href="index.php">Beranda</a>
+          <a id="home" class="nav-link" aria-current="page" href="index.php">Beranda</a>
+        </li>
+        <li class="nav-item me-4">
+          <a id="consult" class="nav-link" href="input.php">Konsultasi</a>
         </li>
         <li class="nav-item me-4">
           <a id="history" class="nav-link" href="riwayat.php">Riwayat</a>

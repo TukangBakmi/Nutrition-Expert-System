@@ -23,6 +23,7 @@
 
   <script>
     document.getElementById("home").classList.add("active");
+    document.getElementById("consult").classList.remove("active");
     document.getElementById("history").classList.remove("active");
     document.getElementById("about").classList.remove("active");
     document.getElementById("admin").classList.remove("active");
