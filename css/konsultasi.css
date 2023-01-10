@@ -52,6 +52,10 @@ td {
     background-color: #CFFFAA;
 }
 
+.table1 tr:nth-child(odd) {
+    background-color: #a1d478;
+}
+
 .btn {
     margin-top: 10px;
     font-weight: 600;

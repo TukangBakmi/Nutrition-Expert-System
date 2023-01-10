@@ -13,15 +13,15 @@
     <div class="container">
         <h1 class="text-center">Masukkan Data</h1>
         <div class="row justify-content-center">
-            <form class="col-7 col-md-7 col-lg-4 align-self-center">
+            <form action="konsultasi.php" id="formInput" method="POST" class="col-7 col-md-7 col-lg-4 align-self-center">
                 <h4>Nama Pasien</h4>
-                <input type="text" name="name" required="required" class="input form-control" size="30" placeholder="Masukkan nama anda">
-                <h4>Tinggi Pasien</h4>
-                <input type="number" name="height" required="required" class="input form-control" size="30" placeholder="Masukkan tinggi badan anda">
-                <h4>Berat Pasien</h4>
-                <input type="number" name="weight" required="required" class="input form-control" size="30" placeholder="Masukkan berat badan anda">
+                <input type="text" id="name" name="name" required="required" class="input form-control" size="30" placeholder="Masukkan nama anda">
+                <h4>Tinggi Pasien (cm)</h4>
+                <input type="number" id="height" name="height" required="required" class="input form-control" size="30" placeholder="Masukkan tinggi badan anda">
+                <h4>Berat Pasien (kg)</h4>
+                <input type="number" id="weight" name="weight" required="required" class="input form-control" size="30" placeholder="Masukkan berat badan anda">
                 <div class="d-flex justify-content-center btn-start">
-                    <a href="konsultasi.php"><button type="button" class="btn">Submit</button></a>
+                    <button id="btnInput" type="submit" class="btn">Submit</button>
                 </div>
             </form>
             <div class="col-lg-4  ">
@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-
+    
     <script>
         document.getElementById("home").classList.remove("active");
         document.getElementById("consult").classList.add("active");
