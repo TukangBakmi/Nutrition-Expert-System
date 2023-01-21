@@ -1,46 +1,74 @@
 $(document).ready(function() {
-  
-	$('#btnInput').on('click', function() {
-        // Mengambil data yang di-input user
-        var createNameEntry = $("#name").val();
-        var createHeightEntry = $("#height").val();
-        var createWeightEntry = $("#weight").val();
+    
+    $(".keyakinan").each(function( index ) {
+        $("#cf_user"+(index+1)).on('change', function() {
+            $('#cf_user'+(index+1)).css({ 'color': 'black'})
+        });
+    });
 
-        // Validate name
-        if((createNameEntry).length == 0) {
+	$('#btnKonsultasi').on('click', function() {
+        var valid = [];
+        $(".keyakinan").each(function( index ) {
+            var value = document.getElementById("cf_user"+(index+1)).value;
+            if(value == "none"){
+                valid[index] = false;
+            }else {
+                valid[index] = true;
+            }
+        });
+        if(valid.includes(false)){
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 confirmButtonText: 'Coba Lagi',
-                text: "Silakan isi nama Pasien",
+                text: "Ada pertanyaan yang belum dijawab nih",
             })
-        }
-
-        // Validate height
-        else if((createHeightEntry).length == 0) {
+        }else{
             Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                confirmButtonText: 'Coba Lagi',
-                text: "Silakan isi tinggi badan Pasien",
-            })
-        }
-
-        // Validate weight
-        else if((createWeightEntry).length == 0) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                confirmButtonText: 'Coba Lagi',
-                text: "Silakan isi berat badan Pasien",
-            })
-        } else {
-            window.location = "konsultasi.php";
+                title: 'Sedang Menghitung...',
+                html: 'Tunggu Sebentar...',
+                timer: 1500,
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                },
+                willClose: () => {
+                    getCFPenyakit();
+                    clearInterval(timerInterval);
+                }
+            });
+            
         }
     });
 });
 
-window.onbeforeunload = confirmExit;
-function confirmExit() {
-  return "";
+function getCFPenyakit(){
+    var dataSend = {};
+    $(".keyakinan").each(function( index ) {
+        var idGejala = $('#gejala'+(index+1)).val();
+        var cfUser = $('#cf_user'+(index+1)).val();
+        var name = $('#name').val();
+        var height = $('#height').val();
+        var weight = $('#weight').val();
+        var nameBmi = $('#bmi').val();
+        dataSend[index] = {
+            id_gejala : idGejala,
+            cf_user : cfUser,
+            name : name,
+            height : height,
+            weight : weight,
+            name_bmi : nameBmi
+        };
+    });
+    $.ajax({
+        type: 'POST',
+        url: '_backprocess/getCFScore.php',
+        async: false,
+        data: dataSend,
+        dataType: 'html',
+        success: function(result){
+            window.location = "hasil.php";
+        }
+    })
 }

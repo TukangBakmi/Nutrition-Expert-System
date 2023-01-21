@@ -17,7 +17,7 @@
         <table class="table1">
             <tr>
                 <th style="width:2%; font-weight: bold; ">#</th>
-                <th style="width:75%;">Gejala</th>
+                <th style="width:68%;">Gejala</th>
                 <th>Tingkat Keyakinan</th>
             </tr>
             
@@ -28,14 +28,19 @@
                     <td>
                         <?php
                             $idGejala = $rowRules["id_gejala"];
-                            $bankSoal = $conn->query("SELECT DISTINCT * FROM cf_bank_soal WHERE id_gejala = '$idGejala'")->fetch_assoc();
+                            $bankSoal = $conn->query("SELECT * FROM cf_bank_soal WHERE id_gejala = '$idGejala'")->fetch_assoc();
                             echo $bankSoal["pertanyaan"];
                         ?>
                     </td>
                     <td>
-                        <form action="hasil.php" id="formKonsultasi" method="POST">
-                            <select name="cf_user" id="cf_user" class="keyakinan">
-                                <option value="" disabled selected hidden>Pilih Jawaban</option>
+                        <form action="hasil.php" id="formKonsultasi<?=$var?>" method="POST">
+                            <input type="hidden" value="<?=$idGejala?>" name="id_gejala" id="gejala<?=$var?>">
+                            <input type="hidden" value="<?=$_POST['name']?>" name="name" id="name">
+                            <input type="hidden" value="<?=$_POST['height']?>" name="height" id="height">
+                            <input type="hidden" value="<?=$_POST['weight']?>" name="weight" id="weight">
+                            <input type="hidden" value="<?=$stringIMT?>" name="name_bmi" id="bmi">
+                            <select name="cf_user" id="cf_user<?=$var?>" class="keyakinan">
+                                <option value="none" selected disabled hidden>Pilih Jawaban</option>
                                 <option value="-1.0">Pasti tidak</option>
                                 <option value="-0.8">Hampir pasti tidak</option>
                                 <option value="-0.6">Kemungkinan besar tidak</option>
@@ -52,11 +57,17 @@
             <?php $var++;?>
             <?php endwhile;?>
         </table>
+        
         <div class="col-auto btn-start">
-            <button type="submit" class="btn mb-5">Submit</button>
+            <button id="btnKonsultasi" type="button" class="btn mb-5">Submit</button>
         </div>
     </div>
 
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/konsultasi.js"></script>
     <script>
         document.getElementById("home").classList.remove("active");
         document.getElementById("consult").classList.add("active");

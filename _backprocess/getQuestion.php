@@ -10,10 +10,10 @@
     }else{
         $stringIMT = "Normal";
     }
-    echo "IMT Anda: {$angkaIMT} ({$stringIMT})";
+    echo "<h6>IMT Anda: {$angkaIMT} ({$stringIMT})</h6>";
     // cari id imt
     $IMT = $conn->query("SELECT * FROM cf_bmi WHERE name = '$stringIMT'")->fetch_assoc();
     $idIMT = $IMT["id"];
+    // tentukan gejala apa saja yang mungkin dialami
     $rules = $conn->query("SELECT DISTINCT id_gejala FROM cf_rules WHERE id_bmi = '$idIMT'");
-    // $selectQuestion = $conn->query("SELECT * FROM cf_bank_soal WHERE ");
 ?>

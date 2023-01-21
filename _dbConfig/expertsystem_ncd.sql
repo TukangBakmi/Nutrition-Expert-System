@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2023 at 06:11 AM
+-- Generation Time: Jan 21, 2023 at 10:41 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -271,7 +271,7 @@ INSERT INTO `cf_rules` (`id`, `id_bmi`, `id_penyakit`, `id_gejala`, `mb`, `md`) 
 (57, 2, 5, 8, 0.89, 0.1),
 (58, 2, 5, 27, 0.9, 0.27),
 (59, 2, 5, 29, 0.81, 0.27),
-(60, 2, 5, 31, 0.35, 0.05),
+(60, 2, 5, 31, 0.35, 0.5),
 (61, 2, 5, 35, 0.65, 0.35),
 (62, 2, 6, 7, 0.75, 0.2),
 (63, 2, 6, 19, 0.75, 0.3),
@@ -310,6 +310,32 @@ INSERT INTO `cf_rules` (`id`, `id_bmi`, `id_penyakit`, `id_gejala`, `mb`, `md`) 
 (96, 3, 6, 31, 0.45, 0.1),
 (97, 3, 6, 32, 0.27, 0.15),
 (98, 3, 6, 34, 0.57, 0.35);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `riwayat`
+--
+
+CREATE TABLE `riwayat` (
+  `id` int(4) NOT NULL,
+  `name_patient` varchar(255) NOT NULL,
+  `height` float NOT NULL,
+  `weight` float NOT NULL,
+  `kwashiorkor` float DEFAULT NULL,
+  `marasmus` float DEFAULT NULL,
+  `gula_darah` float DEFAULT NULL,
+  `masuk_angin` float DEFAULT NULL,
+  `hipertensi` float DEFAULT NULL,
+  `jantung` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `riwayat`
+--
+
+INSERT INTO `riwayat` (`id`, `name_patient`, `height`, `weight`, `kwashiorkor`, `marasmus`, `gula_darah`, `masuk_angin`, `hipertensi`, `jantung`) VALUES
+(1, 'Chelsy', 170, 43, -0.606261, 0.55937, 0.614849, -0.126134, -0.701308, -0.26432);
 
 --
 -- Indexes for dumped tables
@@ -352,6 +378,12 @@ ALTER TABLE `cf_rules`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `riwayat`
+--
+ALTER TABLE `riwayat`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -359,7 +391,7 @@ ALTER TABLE `cf_rules`
 -- AUTO_INCREMENT for table `cf_bank_soal`
 --
 ALTER TABLE `cf_bank_soal`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `cf_bmi`
@@ -384,6 +416,12 @@ ALTER TABLE `cf_penyakit`
 --
 ALTER TABLE `cf_rules`
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+
+--
+-- AUTO_INCREMENT for table `riwayat`
+--
+ALTER TABLE `riwayat`
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
