@@ -12,3 +12,42 @@ h1{
     font-weight: bolder;
     margin: 20px 0;
 }
+
+.table1 {
+    font-family: sans-serif;
+    color: #444;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #CFFFAA;
+}
+
+.table1 tr th {
+    background: #51b009;
+    color: rgb(19, 19, 19);
+    font-weight: bold;
+}
+
+.table1,
+th,
+td {
+    padding: 8px 20px;
+}
+
+.table1 tr:nth-child(even) {
+    background-color: #CFFFAA;
+}
+
+.table1 tr:nth-child(odd) {
+    background-color: #a1d478;
+}
+
+table.table-bordered{
+    border:1px solid black;
+    margin-top:20px;
+  }
+table.table-bordered > thead > tr > th{
+    border:1px solid black;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid black;
+}

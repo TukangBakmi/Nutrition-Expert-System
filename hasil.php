@@ -19,13 +19,17 @@
 
     if(collectData("jantung", "Jantung") != false)
         array_push($arrPercentage, collectData("jantung", "Jantung"));
-
+    
     function collectData($penyakit, $namaPenyakit){
         include('_dbConfig/dbConfig.php');
-        $getid = $conn->query("SELECT MAX(id) AS id FROM riwayat")->fetch_assoc()["id"];
+        if(isset($_GET['id']) && !empty($_GET['id'])){
+            $getid = $_GET['id'];
+        }else{
+            $getid = $conn->query("SELECT MAX(id) AS id FROM riwayat")->fetch_assoc()["id"];
+        }
         $getHasil = $conn->query("SELECT * FROM riwayat WHERE id='$getid'")->fetch_assoc();
         
-        if($getHasil[$penyakit] >= 0){
+        if($getHasil[$penyakit] > 0 && $getHasil[$penyakit] != null){
             $sql = $conn->query("SELECT * FROM cf_penyakit WHERE name='$namaPenyakit'")->fetch_assoc();
             $percentage = $getHasil[$penyakit] * 100 . "%";
             return array($namaPenyakit, $percentage, $sql['description']);
