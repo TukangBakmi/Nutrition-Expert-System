@@ -14,9 +14,9 @@
         <h1 class="text-center">Konsultasi</h1>
         <?php include '_backprocess/getQuestion.php'?>
         <p>Pilih tingkat keyakinan sesuai gejala yang dialami</p>
-        <table class="table1">
+        <table class="table1 table table-bordered">
             <tr>
-                <th style="width:2%; font-weight: bold; ">#</th>
+                <th class="text-center" style="width:2%; font-weight: bold; ">#</th>
                 <th style="width:68%;">Gejala</th>
                 <th>Tingkat Keyakinan</th>
             </tr>
@@ -24,7 +24,7 @@
             <?php $var=1;?>
             <?php while($rowRules = $rules->fetch_assoc()):?>
                 <tr>
-                    <td><?=$var?></td>
+                    <td class="text-center"><?=$var?></td>
                     <td>
                         <?php
                             $idGejala = $rowRules["id_gejala"];

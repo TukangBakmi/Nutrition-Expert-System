@@ -10,13 +10,13 @@
 <body>
   <?php include 'framework/navbar.php' ?>
   <link rel="stylesheet" href="css/index.css">
-  <div class="container">
-    <div class="d-flex text-center flex-column align-items-center">
-      <div class="card">
-        <h5 class="card-title">Expert System <br> Nutrition Condition Detection</h5>
-      </div>
+  <div class="top-wrapper">
+    <div class="container">
+      <h1>Nutrition Condition Detection</h1>
+      <h2>"Eat Healthy to Stay Healthy"</h2>
+      <p class="mx-5">Nutrition Condition Detection adalah sebuah website untuk mendeteksi penyakit nutrisi yang mungkin anda miliki dengan menggunakan metode Certainty Factor dan Forward Chaining.</p>
       <div class="btn-start">
-        <button id="btnStart" type="button" class="btn">Start</button>
+        <button id="btnStart" type="button" class="btn">Mulai</button>
       </div>
     </div>
   </div>

@@ -8,24 +8,36 @@
     $arrPercentage = [];
     $arr = [];
 
-    if(collectData($arr, "kwashiorkor", "Kwashiorkor") != false)
-        array_push($arrPercentage, collectData($arr, "kwashiorkor", "Kwashiorkor"));
-
-    if(collectData($arr, "marasmus", "Marasmus") != false)
-        array_push($arrPercentage, collectData($arr, "marasmus", "Marasmus"));
-
-    if(collectData($arr, "gula_darah", "Gula Darah") != false)
-        array_push($arrPercentage, collectData($arr, "gula_darah", "Gula Darah"));
-
-    if(collectData($arr, "masuk_angin", "Penurunan daya tahan tubuh (Masuk angin)") != false)
-        array_push($arrPercentage, collectData($arr, "masuk_angin", "Penurunan daya tahan tubuh (Masuk angin)"));
-    
-    if(collectData($arr, "hipertensi", "Hipertensi") != false)
-        array_push($arrPercentage, collectData($arr, "hipertensi", "Hipertensi"));
-
-    if(collectData($arr, "jantung", "Jantung") != false)
-        array_push($arrPercentage, collectData($arr, "jantung", "Jantung"));
-
+    if(collectData($arr, "kwashiorkor", "Kwashiorkor") != false){
+        foreach (collectData($arr, "kwashiorkor", "Kwashiorkor") as $x){
+            array_push($arrPercentage, $x);
+        }
+    }
+    if(collectData($arr, "marasmus", "Marasmus") != false){
+        foreach (collectData($arr, "marasmus", "Marasmus") as $x){
+            array_push($arrPercentage, $x);
+        }
+    }
+    if(collectData($arr, "gula_darah", "Gula Darah") != false){
+        foreach (collectData($arr, "gula_darah", "Gula Darah") as $x){
+            array_push($arrPercentage, $x);
+        }
+    }
+    if(collectData($arr, "masuk_angin", "Penurunan daya tahan tubuh (Masuk angin)") != false){
+        foreach (collectData($arr, "masuk_angin", "Penurunan daya tahan tubuh (Masuk angin)") as $x){
+            array_push($arrPercentage, $x);
+        }
+    }
+    if(collectData($arr, "hipertensi", "Hipertensi") != false){
+        foreach (collectData($arr, "hipertensi", "Hipertensi") as $x){
+            array_push($arrPercentage, $x);
+        }
+    }
+    if(collectData($arr, "jantung", "Jantung") != false){
+        foreach (collectData($arr, "jantung", "Jantung") as $x){
+            array_push($arrPercentage, $x);
+        }
+    }
     function collectData($arr, $penyakit, $namaPenyakit){
         include('_dbConfig/dbConfig.php');
         $getHasil = $conn->query("SELECT * FROM riwayat");
@@ -38,6 +50,7 @@
         }
         return $arr;
     }
+    usort($arrPercentage, fn($a, $b) => $b[2] <=> $a[2]);
 ?>
 
 <!DOCTYPE html>
@@ -57,32 +70,38 @@
         <div class="row justify-content-center">
             <table class="table1 table table-bordered">
                 <tr>
-                    <th style="width:2%; font-weight: bold; ">No.</th>
-                    <th style="width:22%;">Tanggal</th>
-                    <th style="width:46%;">Hasil Diagnosa</th>
+                    <th class="text-center" style="width:4%; font-weight: bold; ">No.</th>
+                    <th class="text-center" style="width:16%;">Tanggal</th>
+                    <th class="text-center" style="width:54%;">Hasil Diagnosis</th>
                     <th class="text-center">Aksi</th>
                 </tr>
                 
                 <?php $var=1;?>
                 <?php while($rowRiwayat = $riwayat->fetch_assoc()):?>
                     <tr>
-                        <td><?=$var?></td>
-                        <td>
+                        <td class="text-center align-middle"><?=$var?></td>
+                        <td class="text-center align-middle">
                             <?=$rowRiwayat["tanggal"];?>
                         </td>
-                        <td>
+                        <td class="align-middle">
                             <?php $i=1?>
                             <?php foreach ($arrPercentage as $val): ?>
                                 <?php 
-                                    if($val[0][0] == $rowRiwayat["id"]){
-                                        echo '<div class="d-flex justify-content-between"><span class = "text-start">'.$val[0][1].'</span>';
-                                        echo '<span class = "text-end">'.$val[0][2].'</span></div>';
+                                    if($val[0] == $rowRiwayat["id"]){
+                                        if($i == 1){
+                                            echo '<div class="d-flex justify-content-between fw-bolder"><span class = "text-start">'.$val[1].'</span>';
+                                            echo '<span class = "text-end">'.$val[2].'</span></div>';
+                                        }else{
+                                            echo '<div class="d-flex justify-content-between"><span class = "text-start">'.$val[1].'</span>';
+                                            echo '<span class = "text-end">'.$val[2].'</span></div>';
+                                        }
+                                        $i++;
                                     }
                                 ?>
                             <?php endforeach;?>
                         </td>
-                        <td style='text-align:center'>
-                            <button class='btn btn-warning' id='btnDetail' data-id='<?=$rowRiwayat["id"]?>'>Detail</button>
+                        <td  class="text-center align-middle">
+                            <button class='btn btn-warning w-80' id='btnDetail' data-id='<?=$rowRiwayat["id"]?>'>Detail</button>
                         </td>
                     </tr>
                 <?php $var++;?>

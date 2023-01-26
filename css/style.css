@@ -7,11 +7,16 @@ nav{
     background-color: #3D8026;
 }
 
+nav img{
+    margin-left: 2rem;
+    height: 43px;
+}
+
 .navbar-brand{
     font-weight: 700;
     font-size: large;
     color: #beed76 !important;
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .navbar-brand:hover{

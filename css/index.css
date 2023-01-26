@@ -12,21 +12,35 @@ body {
     padding-bottom: 50px;
 }
 
-.card{
-    border-radius: 50px;
-    background-color: #3D8026;
-    width: 70%;
+/* ---------------------- TOP WRAPPER ----------------------*/
+.top-wrapper {
     padding: 3% 6%;
+    color: #FFF964;
+    text-align: center;
+    cursor: default;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.card-title{
+.top-wrapper h1 {
+    letter-spacing: 5px;
+    margin-bottom: 1%;
     font-size: 60px;
-    color: #FFF964;
     font-weight: 700;
-    cursor: default;
+}
+
+.top-wrapper h2 {
+    letter-spacing: 5px;
+    margin-bottom: 1%;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.top-wrapper p {
+    margin-bottom: 1%;
 }
 
 .btn{
+    border: 2px solid black;
     margin-top: 80px;
     font-weight: 600;
     padding: 10px 70px;

@@ -17,9 +17,11 @@
             </div>
             <h1 class="text-center p-2">Nutrition Condition Detection</h1>
             <p class="p-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                
+                NCD (Nutrition Condition Detection) adalah sebuah website yang 
+                dapat digunakan untuk mendiagnosis beberapa penyakit terkait 
+                nutrisi yang mungkin saja dimiliki oleh seseorang. Website ini 
+                menggunakan metode Certainty Factor dan Forward Chaining untuk menghitung persentase 
+                hasil diagnosis seorang pasien.
             </p>
         </div>
     </div>

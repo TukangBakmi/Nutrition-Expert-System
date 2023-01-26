@@ -5,6 +5,7 @@ body{
 .container{
     padding-top: 120px;
     padding-bottom: 50px;
+    justify-content: center;
 }
 
 h1{
