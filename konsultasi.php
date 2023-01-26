@@ -76,6 +76,7 @@
         document.getElementById("admin").classList.remove("active");
     </script>
 
+    <?php include 'framework/footer.php' ?>
 </body>
 
 </html>

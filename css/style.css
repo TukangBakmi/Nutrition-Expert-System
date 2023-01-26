@@ -39,3 +39,25 @@ nav img{
 .nav-link:hover{
     color: white !important;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:40px;
+    background-image: linear-gradient(to bottom, rgb(79, 165, 50) , rgb(45, 95, 28));
+}
+
+footer p {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+
+.footer-bottom{
+    color: white;
+    text-align: center;
+}

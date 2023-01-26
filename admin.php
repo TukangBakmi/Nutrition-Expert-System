@@ -55,5 +55,7 @@
         document.getElementById("about").classList.remove("active");
         document.getElementById("admin").classList.add("active");
     </script>
+
+    <?php include 'framework/footer.php' ?>
 </body>
 </html>

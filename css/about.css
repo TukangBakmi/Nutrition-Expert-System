@@ -1,5 +1,6 @@
 body{
     background-color: #90CE86;
+    margin: 0;
 }
 
 .container{
@@ -16,4 +17,112 @@ h1{
 
 #aboutWeb p{
     text-align: justify !important;
+}
+
+@keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-webkit-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-moz-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-o-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+.card-category-5 ul{
+    padding: 0;
+}
+    
+.card-category-5 ul li{
+    list-style-type: none;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card-category-5{
+    font-family: sans-serif;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.card-category-5 .all-pr-cards {
+    padding:0;
+}
+
+.card-category-5 .per-card-3 {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -o-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-category-5 .per-card-3 .card-image {
+    background: #009643;
+    text-align:left;
+}
+
+.card-category-5 .per-card-3 .card-image img {
+    height: 90px;
+    border-radius: 50px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.card-category-5 .per-card-3 .card-image .per-name {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-category-5 .per-card-3 .card-image .per-nim {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+}
+
+.card-category-5 .per-card-3 .card-content {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.card-category-5 .per-card-3 .card-content .per-position {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #009688;
+}
+
+.card-category-5 .per-card-3 .card-content .card-text {
+    padding: 10px;
+}
+
+.card-category-5 .per-card-3 .card-content .card-text span {
+    font-size: 13px;
+    color: #007368;
 }
