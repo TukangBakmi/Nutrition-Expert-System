@@ -54,18 +54,18 @@
     <link rel="stylesheet" href="css/hasil.css">
     <div class="container">
         <h1 class="hasil text-center">Hasil Diagnosis</h1>
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
             <div class="carousel-inner">
                 <?php $var=0;?>
                 <?php foreach ($arrPercentage as $val): ?>
                     <?php if($var == 0){
                         echo'
                         <div class="carousel-item top-50 active" data-bs-interval="10000">
-                            <div class="card m-auto" style="width: 50rem; height: 35rem;">
+                            <div class="card m-auto" style="width: 50rem; height: 26rem;">
                                 <div class="card-body">
                                     <h3 class="card-title text-center">'.$val[0].'</h3>
                                     <h5 class="card-text text-center">'.$val[1].'</h5><br>
-                                    <h2 class="card-title text-center mt-5">Keterangan</h2>
+                                    <h2 class="card-title text-center">Keterangan</h2>
                                     <p class="card-text text-center">'.$val[2].'</p>
                                 </div>
                             </div>
@@ -73,11 +73,11 @@
                     }else{
                         echo'
                         <div class="carousel-item top-50" data-bs-interval="10000">
-                            <div class="card m-auto" style="width: 50rem; height: 35rem;">
+                            <div class="card m-auto" style="width: 50rem; height: 26rem;">
                                 <div class="card-body">
                                     <h3 class="card-title text-center">'.$val[0].'</h3>
                                     <h5 class="card-text text-center">'.$val[1].'</h5><br>
-                                    <h2 class="card-title text-center mt-5">Keterangan</h2>
+                                    <h2 class="card-title text-center">Keterangan</h2>
                                     <p class="card-text text-center">'.$val[2].'</p>
                                 </div>
                             </div>
@@ -97,7 +97,29 @@
             </button>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        $(document).ready(function() {
+            checkCarouselNextPrev();
+            $('#carouselExampleDark').on('slid.bs.carousel', '', function() {
+                var $this = $(this);
+                $this.children('.carousel-control-next').show();
+                checkCarouselNextPrev();
+            });
+        });
+        function checkCarouselNextPrev(){
+            if($('.carousel-inner .carousel-item:first').hasClass('active')) {
+                $('#carouselExampleDark').children('.carousel-control-prev').hide();
+            } else{
+                $('#carouselExampleDark').children('.carousel-control-prev').show();
+            }
+            if($('.carousel-inner .carousel-item:last').hasClass('active')) {
+                $('#carouselExampleDark').children('.carousel-control-next').hide();
+            }else{
+                $('#carouselExampleDark').children('.carousel-control-next').show();
+            }
+        }
         document.getElementById("home").classList.remove("active");
         document.getElementById("consult").classList.add("active");
         document.getElementById("history").classList.remove("active");

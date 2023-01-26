@@ -12,3 +12,22 @@ h1{
     font-weight: bolder;
     margin: 20px 0;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 70px;
+  width: 70px;
+  outline: black;
+}
+
+.card{
+    background-color: transparent;
+    border: none;
+}
+
+.card-body{
+    background-color:#a1d478;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-color: #276600;
+}
