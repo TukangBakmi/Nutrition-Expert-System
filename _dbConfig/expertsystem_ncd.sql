@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2023 at 10:41 AM
+-- Generation Time: Jan 26, 2023 at 02:24 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -319,6 +319,7 @@ INSERT INTO `cf_rules` (`id`, `id_bmi`, `id_penyakit`, `id_gejala`, `mb`, `md`) 
 
 CREATE TABLE `riwayat` (
   `id` int(4) NOT NULL,
+  `tanggal` date NOT NULL DEFAULT current_timestamp(),
   `name_patient` varchar(255) NOT NULL,
   `height` float NOT NULL,
   `weight` float NOT NULL,
@@ -334,8 +335,10 @@ CREATE TABLE `riwayat` (
 -- Dumping data for table `riwayat`
 --
 
-INSERT INTO `riwayat` (`id`, `name_patient`, `height`, `weight`, `kwashiorkor`, `marasmus`, `gula_darah`, `masuk_angin`, `hipertensi`, `jantung`) VALUES
-(1, 'Chelsy', 170, 43, -0.606261, 0.55937, 0.614849, -0.126134, -0.701308, -0.26432);
+INSERT INTO `riwayat` (`id`, `tanggal`, `name_patient`, `height`, `weight`, `kwashiorkor`, `marasmus`, `gula_darah`, `masuk_angin`, `hipertensi`, `jantung`) VALUES
+(1, '2023-01-25', 'Chelsy', 170, 43, -0.606261, 0.55937, 0.614849, -0.126134, -0.701308, -0.26432),
+(2, '2023-01-25', 'Albert', 172, 68, NULL, NULL, -0.555371, -0.353851, -0.210784, 0.674759),
+(3, '2023-01-26', 'Vaneza', 156, 48, NULL, NULL, 0.169437, 0.416746, 0.266043, 0.903637);
 
 --
 -- Indexes for dumped tables
@@ -421,7 +424,7 @@ ALTER TABLE `cf_rules`
 -- AUTO_INCREMENT for table `riwayat`
 --
 ALTER TABLE `riwayat`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
