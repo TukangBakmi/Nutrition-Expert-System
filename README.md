@@ -51,6 +51,8 @@
 
 **Albert Ardiansyah**  
 📫 [@TukangBakmi on GitHub](https://github.com/TukangBakmi)
+📫 [@cekaaaa on GitHub](https://github.com/cekaaaa)
+📫 [@vcitra on GitHub](https://github.com/vcitra)
 
 ## 📃 License
 
