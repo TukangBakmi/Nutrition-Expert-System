@@ -42,6 +42,11 @@
    http://localhost/Nutrition-Expert-System
    ```
 
+## 📸 Screenshots
+![image](https://github.com/user-attachments/assets/a5820982-5bb0-4f36-bfd4-b2f97a7513e7)
+![image](https://github.com/user-attachments/assets/8da5b926-247b-4664-b99f-73eed1e4235e)
+![image](https://github.com/user-attachments/assets/b0b66228-07a3-45e5-844d-e91676b7d373)
+
 ## 🙋‍♂️ Author
 
 **Albert Ardiansyah**  
